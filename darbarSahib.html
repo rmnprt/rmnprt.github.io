@@ -1,0 +1,32 @@
+<meta name=viewport content=initial-scale=1,minimum-scale=1,maximum-scale=1,width=device-width>
+<link href=data:;base64,iVBORwOKGO= rel="icon">
+<style>
+    body {
+        align-items: center;
+        background: #f6bf3e;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    } button {
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABgCAYAAACKa/UAAAACDUlEQVR4Ae3dAYQiYRjG8RgIcQgHgeDgICAgEGBAcMCBwIEDggOHIAKBwAEHBIEDg0NYWAQLCwuLxSCM8O6DtSK1bY8ms/4vPwD4E+l7v6/azgxkJcWLTFI5YZiJxAH/5IscGCaVeEMhY2mQa38yiRM9yDfZGSaXeKdMvgqjiTNtZSqfCOh5lO8E9P2XDgE9W5lJk4D+x3pIQN9KOgT0bGUuTQJ6nuSHJAT03EiXgL4/8pmAnlx+SkJAz630COj7Ky0CenIZSUJAz530CehbSIuAno38kjoB/Y91SkDfUtoE9BTyW+oE9NzLgIA+cwGAgP4CAAH9BQAC+gsABPQXAAjoLAAQ0FgAIKCxAEBAYwEg8QJiJV0/IM5aAAh4CwAB76Qw4C0ABLwFgDgZ1tLzA2LmB8TIC4hC2l5ATL2AWHsBURCwygH5CGNSxYB8jeGLNKbyOgHvN8Lw8Ct14Kg5P6he+E5fYO/jOizxUIlthYB3sz48bGyFh53B8LC1GsewN03AQibSKHXFl7sjXHMYcM3BvD9HwNJucHLZMOWyYam32Am44MJ16S958OjEiEcnPuJrRlVZpyWgsdBNwFLeFOT5u65UcsLAu6pVuthHQB6hvcDlZgLyvv51H3ggIP8xcsUDawLyP0tlH1gTkP+a25vcO7BmMu+5TSb1D6yZsX9gzaSSyUZyWUq/dnSYZ+TiQdQv9dP1AAAAAElFTkSuQmCC') no-repeat center / contain;
+        border: 0;
+        cursor: pointer;
+        height: 20vw;
+        transition: 0.1s;
+        width: 20vw;
+    } button:active {
+        transform: scale(0.9);
+    } button.pause {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABgBAMAAABf62nbAAAAGFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWNxwqAAAAB3RSTlMABJDu8QaLsWVdnAAAAFpJREFUSMdjCHIvh4JiVQYIQBVTL4eDIqg8qpg7glMMlUcVK0cCUHlGZLFRBaMKRhWMKhhVMKpgVMGoglEFowpGFdBDgTmhprs6glMGlUcVEzKHK06Edx+QxACwESrXSCQS/AAAAABJRU5ErkJggg==');
+    }
+</style>
+
+<audio id=audio preload=auto src=//sgpc.net:8000/;?1554722989950></audio>
+<button id=playPause></button>
+
+<script>
+    playPause.addEventListener('click', function(){
+        this.classList.toggle('pause')
+        audio[audio.paused ? 'play' : 'pause']()
+    })
+</script>
